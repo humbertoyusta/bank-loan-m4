@@ -1,0 +1,21 @@
+name: Bank Personal Loan Modelling, Oversampled Train data
+url: https://www.kaggle.com/itsmesunil/bank-loan-modelling
+description: Oversampled Train data of the Bank Personal Loan Modelling dataset.
+row_count: 7240
+column_count: 14
+columns:
+- Age
+- Experience
+- Income
+- ZIP Code
+- Family
+- CCAvg
+- Education
+- Mortgage
+- Securities Account
+- CD Account
+- Online
+- CreditCard
+- Has Mortgage
+- Personal Loan
+target_column: Personal Loan

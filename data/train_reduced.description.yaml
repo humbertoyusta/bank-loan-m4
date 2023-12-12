@@ -1,0 +1,21 @@
+name: Bank Personal Loan Modelling, Reduced Train data
+url: https://www.kaggle.com/itsmesunil/bank-loan-modelling
+description: Reduced Train data of the Bank Personal Loan Modelling dataset.
+row_count: 760
+column_count: 14
+columns:
+- Age
+- Experience
+- Income
+- ZIP Code
+- Family
+- CCAvg
+- Education
+- Mortgage
+- Personal Loan
+- Securities Account
+- CD Account
+- Online
+- CreditCard
+- Has Mortgage
+target_column: Personal Loan

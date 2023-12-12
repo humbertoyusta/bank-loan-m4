@@ -11,10 +11,10 @@ class Preprocessor(BaseEstimator, TransformerMixin):
         self.poly = PolynomialFeatures(degree=self.degree, include_bias=False) if self.add_polynomial_features else None
 
     def fit(self, X, y=None):
-        self.scaler.fit(X)
+        X_scaled = self.scaler.fit_transform(X)
 
         if self.add_polynomial_features:
-            self.poly.fit(X)
+            self.poly.fit(X_scaled)
 
         return self
 
