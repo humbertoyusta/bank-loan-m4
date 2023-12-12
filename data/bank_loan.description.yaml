@@ -1,0 +1,26 @@
+name: Bank Personal Loan Modelling
+url: https://www.kaggle.com/itsmesunil/bank-loan-modelling
+description: 'The data set includes 5000 observations with fourteen variables divided
+  into four different measurement categories. The binary category has five variables,
+  including the target variable personal loan, also securities account, CD account,
+  online banking and credit card. The interval category contains five variables: age,
+  experience, income, CC avg and mortgage. The ordinal category includes the variables
+  family and education.'
+row_count: 5000
+column_count: 14
+columns:
+- Age
+- Experience
+- Income
+- ZIP Code
+- Family
+- CCAvg
+- Education
+- Mortgage
+- Personal Loan
+- Securities Account
+- CD Account
+- Online
+- CreditCard
+- Has Mortgage
+target_column: Personal Loan
