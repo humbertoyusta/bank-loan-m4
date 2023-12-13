@@ -1,0 +1,17 @@
+description: KNN Classifier, trained on reduced data
+best_params:
+  knn_params:
+    n_neighbors: 7
+    metric: manhattan
+    weights: distance
+  preprocessor_params:
+    add_polynomial_features: false
+accuracy: 0.916
+recall: 0.87
+precision: 0.5506329113924051
+confusion_matrix:
+- - 829
+  - 71
+- - 13
+  - 87
+f1_score: 0.6744186046511629
