@@ -23,6 +23,9 @@ class RandomForestClassifier(BaseEstimator):
     def predict(self, X):
         return self.pipeline.predict(X)
 
+    def get_feature_importances(self):
+        return self.pipeline.named_steps['random_forest'].feature_importances_
+
     def get_params(self, deep=True):
         return {"preprocessor_params": self.preprocessor_params,
                 "random_forest_params": self.random_forest_params}

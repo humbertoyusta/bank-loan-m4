@@ -4,16 +4,16 @@ best_params:
     add_polynomial_features: true
     degree: 2
   random_forest_params:
-    n_estimators: 60
+    n_estimators: 100
     max_depth: null
     min_samples_split: 2
-    min_samples_leaf: 2
-accuracy: 0.98
-recall: 0.82
-precision: 0.9761904761904762
+    min_samples_leaf: 1
+accuracy: 0.983
+recall: 0.85
+precision: 0.9770114942528736
 confusion_matrix:
 - - 898
   - 2
-- - 18
-  - 82
-f1_score: 0.8913043478260869
+- - 15
+  - 85
+f1_score: 0.9090909090909092
