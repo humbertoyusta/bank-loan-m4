@@ -1,0 +1,18 @@
+description: XGBoost Classifier, trained on original data
+best_params:
+  preprocessor_params:
+    add_polynomial_features: false
+  xgboost_params:
+    learning_rate: 0.2
+    n_estimators: 100
+    max_depth: 3
+    min_child_weight: 1
+accuracy: 0.984
+recall: 0.89
+precision: 0.9468085106382979
+confusion_matrix:
+- - 895
+  - 5
+- - 11
+  - 89
+f1_score: 0.9175257731958764

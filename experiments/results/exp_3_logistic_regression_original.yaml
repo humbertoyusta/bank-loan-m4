@@ -1,0 +1,18 @@
+description: Logistic Regression Classifier, trained on original data
+best_params:
+  logistic_regression_params:
+    C: 10.0
+    max_iter: 500
+    solver: liblinear
+  preprocessor_params:
+    add_polynomial_features: true
+    degree: 4
+accuracy: 0.977
+recall: 0.8
+precision: 0.963855421686747
+confusion_matrix:
+- - 897
+  - 3
+- - 20
+  - 80
+f1_score: 0.8743169398907104
