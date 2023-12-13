@@ -23,6 +23,9 @@ class XGBoostClassifier(BaseEstimator):
     def predict(self, X):
         return self.pipeline.predict(X)
 
+    def predict_proba(self, X):
+        return self.pipeline.predict_proba(X)
+
     def get_params(self, deep=True):
         return {"preprocessor_params": self.preprocessor_params,
                 "xgboost_params": self.xgboost_params}
