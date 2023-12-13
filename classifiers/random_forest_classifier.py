@@ -32,5 +32,5 @@ class RandomForestClassifier(BaseEstimator):
             setattr(self, parameter, value)
         
         self.preprocessor = Preprocessor(**self.preprocessor_params)
-        self.model = RandomForestClassifier(**self.random_forest_params)
+        self.model = RandomForestClassifierDefault(**self.random_forest_params)
         return self
