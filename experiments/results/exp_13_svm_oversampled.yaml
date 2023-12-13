@@ -1,0 +1,18 @@
+description: SVM Classifier, trained on oversampled data
+best_params:
+  preprocessor_params:
+    add_polynomial_features: true
+    degree: 2
+  svm_params:
+    C: 10
+    kernel: poly
+    gamma: scale
+accuracy: 0.955
+recall: 0.86
+precision: 0.7350427350427351
+confusion_matrix:
+- - 869
+  - 31
+- - 14
+  - 86
+f1_score: 0.7926267281105991
