@@ -1,4 +1,3 @@
-
 from telegram import Update, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, MessageHandler, ConversationHandler, CallbackContext, filters, CallbackQueryHandler
 import pickle
@@ -101,26 +100,13 @@ async def avg_spending(update: Update, context: CallbackContext) -> int:
 
     prediction = loaded_model.predict(user_data_for_prediction)
 
-    keyboard = [[InlineKeyboardButton("Restart", callback_data='restart')]]
-    reply_markup = InlineKeyboardMarkup(keyboard)
-
-    await update.message.reply_text(f'Based on your information, we {("do not", "do")[prediction[0]]} recommend you to accept the personal loan offer.', reply_markup=reply_markup)
+    await update.message.reply_text(f'Based on your information, we {("do not", "do")[prediction[0]]} recommend you to accept the personal loan offer.\n\nTo start again, send /start')
 
     return ConversationHandler.END
 
 async def cancel(update: Update, _: CallbackContext) -> int:
     await update.message.reply_text('Operation cancelled.')
     return ConversationHandler.END
-
-async def restart_handler(update: Update, context: CallbackContext) -> None:
-    query = update.callback_query
-    await query.answer()
-
-    context.user_data.clear()
-
-    await query.message.reply_text('What is your age?')
-
-    return AGE
 
 def main():
     load_dotenv()
@@ -146,7 +132,6 @@ def main():
     )
 
     application.add_handler(conv_handler)
-    application.add_handler(CallbackQueryHandler(restart_handler, pattern='^restart$'))
 
     application.run_polling()
 
